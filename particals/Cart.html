@@ -1,0 +1,6 @@
+<div ng-controller="CartController">
+    <h2>Giỏ hàng của bạn</h2>
+    <ul>
+        <li ng-repeat="productId in cart">{{ getProductById(productId).name }}</li>
+    </ul>
+</div>

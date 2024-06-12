@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+<body ng-app="SignIn" ng-controller="SignInController">
+<div class="login-container">
+    <h2>Đăng nhập</h2>
+    <form name="signInForm" novalidate>
+        <div class="input-group">
+            <label for="Email">Email</label>
+            <input type="email" id="Email" name="Email" ng-model="info.email" required>
+            <small class="error-message" ng-show="signInForm.Email.$dirty && signInForm.Email.$error.required">
+                Vui lòng nhập email
+            </small>
+            <small class="error-message" ng-show="signInForm.Email.$dirty && signInForm.Email.$error.email">
+                Email phải đúng định dạng
+            </small>
+        </div>
+        <div class="input-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" ng-model="info.password" required>
+            <small class="error-message" ng-show="signInForm.password.$dirty && signInForm.password.$error.required">
+                Vui lòng nhập mật khẩu
+            </small>
+        </div>
+        <button ng-click="signIn()" ng-disabled="signInForm.$invalid">Đăng nhập</button>
+    </form>
+</div>
+<script src="../js/signIn.js"></script>
+</body>
+</html>

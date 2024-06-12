@@ -1,0 +1,73 @@
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://htmldemo.net/koffee/koffee/img/slider/1.jpg"
+                 class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container-2 my-4 mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center">
+                <h2 style="color:#614a3d">Book Your Table</h2>
+                <img src="https://htmldemo.net/koffee/koffee/img/icons/koffee.png" alt="">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has </p>
+                <p> been the industry's standard dummy text ever since.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reservation Form -->
+<div class="container-form">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <form action="/submit-form" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label"></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label"></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label"></label>
+                    <input type="date" class="form-control" id="date" name="date" placeholder="Date" required>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <form action="/submit-form" method="post">
+                <div class="mb-3">
+                    <label for="phone" class="form-label"></label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="people" class="form-label"></label>
+                    <input type="number" class="form-control" id="people" name="people" placeholder="Number of people"
+                           required>
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label"></label>
+                    <input type="time" class="form-control" id="time" name="time" placeholder="Time" required>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Di chuyển nút "Submit" ra khỏi cặp thẻ form và đặt nó dưới cùng của cả hai form -->
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button type="submit" class="btn btn-custom">Submit</button>
+        </div>
+    </div>
+</div>
