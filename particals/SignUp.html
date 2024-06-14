@@ -63,6 +63,7 @@
         button:hover {
             background-color: #0056b3;
         }
+
         .error-message {
             color: red;
         }
@@ -74,68 +75,97 @@
     <form name="signUpForm" novalidate>
         <div class="input-group">
             <label for="username">Tên đăng nhập</label>
-            <input name="username" type="text" id="username" ng-model="info.username" class="form-control" required ng-pattern="/^[^\d]+$/">
-            <small ng-show="signUpForm.username.$dirty && signUpForm.username.$error.required" class="text-danger error-message">
+            <input name="username" type="text" id="username" ng-model="info.username" class="form-control" required
+                   ng-pattern="/^[^\d]+$/">
+            <small ng-show="signUpForm.username.$dirty && signUpForm.username.$error.required"
+                   class="text-danger error-message">
                 Vui lòng nhập tên đăng nhập
             </small>
-            <small ng-show="signUpForm.username.$dirty && signUpForm.username.$error.pattern" class="text-danger error-message">
+            <small ng-show="signUpForm.username.$dirty && signUpForm.username.$error.pattern"
+                   class="text-danger error-message">
                 Tên đăng nhập không được chứa số
             </small>
         </div>
         <div class="input-group">
             <label for="email">Email</label>
-            <input name="email" type="email" id="email" ng-model="info.email" required>
-            <small ng-show="signUpForm.email.$dirty || signUpForm.email.$error.required" class="text-danger error-message">
+            <input name="email" type="email" id="email" ng-model="info.email" required pattern=".+@.+\.(com|net|org)$">
+            <small ng-show="signUpForm.email.$dirty && signUpForm.email.$error.required"
+                   class="text-danger error-message">
                 Vui lòng nhập email
             </small>
-            <small ng-show="signUpForm.email.$dirty || signUpForm.email.$error.email" class="text-danger error-message">
+            <small ng-show="signUpForm.email.$dirty && signUpForm.email.$error.email"
+                   class="text-danger error-message">
                 Email phải đúng định dạng
             </small>
+            <small ng-show="signUpForm.email.$dirty && signUpForm.email.$error.pattern"
+                   class="text-danger error-message">
+                Email phải có đuôi .com, .net hoặc .org
+            </small>
         </div>
+
         <div class="input-group">
             <label for="phone">Số điện thoại</label>
-            <input name="phone" type="text" id="phone" ng-model="info.phone" required ng-minlength="10" ng-maxlength="12" ng-pattern="/^0\d*$/" ng-trim="false">
-            <small ng-show="signUpForm.phone.$dirty || signUpForm.phone.$error.required" class="text-danger error-message">
+            <input name="phone" type="text" id="phone" ng-model="info.phone" required ng-minlength="10"
+                   ng-maxlength="12" ng-pattern="/^0\d*$/" ng-trim="false">
+            <small ng-show="signUpForm.phone.$dirty && signUpForm.phone.$error.required"
+                   class="text-danger error-message">
                 Vui lòng nhập số điện thoại
             </small>
-            <small ng-show="signUpForm.phone.$dirty || signUpForm.phone.$error.minlength" class="text-danger error-message">
+            <small ng-show="signUpForm.phone.$dirty && signUpForm.phone.$error.minlength"
+                   class="text-danger error-message">
                 Số điện thoại phải có ít nhất 10 ký tự
             </small>
-            <small ng-show="signUpForm.phone.$dirty || signUpForm.phone.$error.maxlength" class="text-danger error-message">
+            <small ng-show="signUpForm.phone.$dirty && signUpForm.phone.$error.maxlength"
+                   class="text-danger error-message">
                 Số điện thoại không được quá 12 ký tự
             </small>
-            <small ng-show="signUpForm.phone.$dirty || signUpForm.phone.$error.pattern" class="text-danger error-message">
+            <small ng-show="signUpForm.phone.$dirty && signUpForm.phone.$error.pattern"
+                   class="text-danger error-message">
                 Số điện thoại phải bắt đầu bằng số 0 và chỉ chứa số
             </small>
         </div>
 
         <div class="input-group">
             <label for="password">Mật khẩu</label>
-            <input name="password" type="password" id="password" ng-model="info.password" autocomplete="new-password" required ng-minlength="6">
-            <small ng-show="signUpForm.password.$dirty || signUpForm.password.$error.required" class="text-danger error-message">
+            <input name="password" type="password" id="password" ng-model="info.password" autocomplete="new-password"
+                   required ng-minlength="6" pattern="^(?=.*[!@#$%^&*]).+$">
+            <small ng-show="signUpForm.password.$dirty && signUpForm.password.$error.required"
+                   class="text-danger error-message">
                 Vui lòng nhập mật khẩu
             </small>
-            <small ng-show="signUpForm.password.$dirty || signUpForm.password.$error.minlength" class="text-danger error-message">
+            <small ng-show="signUpForm.password.$dirty && signUpForm.password.$error.minlength"
+                   class="text-danger error-message">
                 Mật khẩu phải có ít nhất 6 ký tự
             </small>
+            <small ng-show="signUpForm.password.$dirty && signUpForm.password.$error.pattern"
+                   class="text-danger error-message">
+                Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt
+            </small>
         </div>
+
         <div class="input-group">
             <label for="confirm-password">Nhập lại mật khẩu</label>
-            <input name="confirm_password" type="password" id="confirm-password" ng-model="info.confirm_password" required>
-            <small ng-show="signUpForm.confirm_password.$dirty || signUpForm.confirm_password.$error.required" class="text-danger error-message">
+            <input name="confirm_password" type="password" id="confirm-password" ng-model="info.confirm_password"
+                   required>
+            <small ng-show="signUpForm.confirm_password.$dirty && signUpForm.confirm_password.$error.required"
+                   class="text-danger error-message">
                 Vui lòng nhập lại mật khẩu
             </small>
-            <small ng-show="info.password !== info.confirm_password || signUpForm.confirm_password.$dirty" class="text-danger error-message">
+            <small ng-show="info.password !== info.confirm_password && signUpForm.confirm_password.$dirty"
+                   class="text-danger error-message">
                 Mật khẩu không khớp
             </small>
         </div>
-        <button ng-click="signUp()" ng-disabled="signUpForm.$invalid">Đăng ký</button>
+        <div class="button-group">
+            <button ng-click="signUp()" ng-disabled="signUpForm.$invalid">Đăng ký</button>
+        </div>
+        <br>
+        <a href="./SignIn.html" class="signUp-link">Tiến hành đăng nhập? Đăng nhập</a>
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 <script src="../js/signUp.js"></script>
-
 </body>
 </html>

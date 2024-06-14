@@ -1,52 +1,76 @@
+<style>
+    .single-blog {
+        margin-bottom: 30px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .blog-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .blog-text {
+        padding: 20px;
+    }
+
+    .blog-text h4 {
+        color: #614a3d;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .blog-text p {
+        margin-bottom: 15px;
+    }
+
+    .blog-text span {
+        display: block;
+        color: #888;
+        margin-bottom: 10px;
+    }
+
+    .blog-text a {
+        color: #614a3d;
+        font-weight: bold;
+    }
+
+    .blog-text a:hover {
+        text-decoration: underline;
+    }
+</style>
+
 <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="https://htmldemo.net/koffee/koffee/img/slider/1.jpg"
-                 class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+    <!-- Slide carousel content here -->
 </div>
-<div class="container-2 my-4 mt-5 mb-5">
+
+<div class="container my-5">
     <div class="row">
         <div class="col-md-12">
             <div class="text-center">
                 <h2 style="color:#614a3d">Our Blog</h2>
                 <img src="https://htmldemo.net/koffee/koffee/img/icons/koffee.png" alt="">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has </p>
-                <p> been the industry's standard dummy text ever since.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                <p>been the industry's standard dummy text ever since.</p>
             </div>
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="row">
-        <div class="blog-carousel">
-            <div class="col">
-                <div class="single-blog">
-                    <a href="#" class="blog-image">
-                        <img src="https://htmldemo.net/koffee/koffee/img/blog/1.jpg" alt="">
-                    </a>
-                    <div class="blog-text text-center">
-                        <span>25 March 2017</span>
-                        <h4><a href="#">Enjoy A Free koffee &amp; Tea Cup</a></h4>
-                        <p>Lorem Ipsum is simply dummy lor text of the printing and typesetting industry. Lorem
-                            Ipsum</p>
-                        <a href="#">Read More</a>
-                    </div>
+        <div class="col-md-3" ng-repeat="blog in blogList">
+            <div class="single-blog">
+                <div class="blog-image">
+                    <img ng-src="{{blog.image}}" alt="">
+                </div>
+                <div class="blog-text">
+                    <h4>{{blog.title}}</h4>
+                    <span>Ngày đăng: {{blog.date}}</span>
+                    <p>{{blog.description}}</p>
+                    <a href="#!/blog/{{blog.id}}">Xem bài viết</a>
                 </div>
             </div>
         </div>

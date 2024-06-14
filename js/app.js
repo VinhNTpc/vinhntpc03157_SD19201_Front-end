@@ -33,7 +33,11 @@ app.config(function ($routeProvider) {
         })
         .when("/blog", {
             templateUrl: "./particals/Blog.html",
-            // controller: blogListController
+            controller: blogListController
+        })
+        .when("/blog/:blogId", {
+            templateUrl: "./particals/BlogDetails.html",
+            controller: blogDetailController
         })
         .when("/contact", {
             templateUrl: "./particals/Contact.html"
@@ -91,6 +95,16 @@ function  productDetailController ($scope, $http, $routeParams){
         });
 }
 
-// function blogListController(){
-//
-// }
+function blogListController($scope, $http) {
+    $http.get('http://localhost:3000/posts')
+        .then(function(response) {
+            $scope.blogList = response.data;
+        });
+}
+function  blogDetailController ($scope, $http, $routeParams){
+    var blogId = $routeParams.blogId;
+    $http.get('http://localhost:3000/posts/' + blogId)
+        .then(function(response) {
+            $scope.blog = response.data;
+        });
+}
