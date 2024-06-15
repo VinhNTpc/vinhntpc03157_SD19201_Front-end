@@ -1,0 +1,114 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Enjoy A Free Koffee & Tea Cup",
+      "image": "https://htmldemo.net/koffee/koffee/img/blog/1.jpg",
+      "content":"Trong bài viết này, chúng tôi chia sẻ cơ hội tuyệt vời dành cho bạn để thưởng thức một tách cà phê hoặc trà miễn phí. Không có gì tuyệt vời hơn là bắt đầu một ngày mới với hương vị đặc biệt này.",
+      "views": 100,
+      "date": "25 March 2017"
+    },
+    {
+      "id": "2",
+      "title": "Good Idea's Start With Great Koffee",
+      "image": "https://htmldemo.net/koffee/koffee/img/blog/2.jpg",
+      "content": "Có lẽ không có gì tốt hơn là bắt đầu một ý tưởng mới với một tách cà phê ngon. Trong bài viết này, chúng tôi sẽ chia sẻ với bạn về sức mạnh của cà phê trong việc khơi nguồn cho những ý tưởng tuyệt vời.",
+      "views": 200,
+      "date": "17 April 2017"
+    },
+    {
+      "id": "3",
+      "title": "Good Koffee Is A Pleasure",
+      "image": "https://htmldemo.net/koffee/koffee/img/blog/3.jpg",
+      "content": "Cà phê tốt không chỉ là một thức uống mà còn là một niềm vui thực sự. Trong bài viết này, chúng tôi sẽ đào sâu vào thế giới của cà phê và tại sao nó lại mang lại niềm vui đặc biệt cho mỗi người.",
+      "views": 300,
+      "date": "10 July 2017"
+    },
+    {
+      "id": "4",
+      "title": "Enjoy A Free Koffee & Tea Cup",
+      "image": "https://htmldemo.net/koffee/koffee/img/blog/4.jpg",
+      "content": "Hãy tham gia cùng chúng tôi để thưởng thức một tách cà phê hoặc trà miễn phí! Trong bài viết này, chúng tôi sẽ chia sẻ với bạn cơ hội tuyệt vời này và tại sao nó đặc biệt đối với chúng tôi.",
+      "views": 400,
+      "date": "17 April 2017  "
+    }
+    
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Cà phê Americano",
+      "description": "Một hỗn hợp cổ điển của espresso và nước nóng, tạo ra hương vị mạnh mẽ và đầy đặn với hậu vị mềm mại.",
+      "images": "https://htmldemo.net/koffee/koffee/img/koffee/s-1.jpg",
+      "price": 200000
+    },
+    {
+      "id": "2",
+      "name": "Latte Vanilla",
+      "description": "Espresso kem kết hợp với sữa hấp và siro vani, tạo ra sự cân bằng đáng kinh ngạc giữa vị ngọt và đậm đà.",
+      "images": "https://htmldemo.net/koffee/koffee/img/koffee/s-2.jpg",
+      "price": 300000
+    },
+    {
+      "id": "3",
+      "name": "Cà phê Cappuccino",
+      "description": "Một loại cà phê Ý cổ điển được làm từ bằng espresso, sữa hấp và sữa bọt, tạo ra một loại đồ uống mềm mại và thưởng thức với hương vị espresso mạnh mẽ.",
+      "images": "https://htmldemo.net/koffee/koffee/img/koffee/s-3.jpg",
+      "price": 400000
+    },
+    {
+      "id": "4",
+      "name": "Cà phê Americano",
+      "description": "Tương tự như Americano truyền thống nhưng có một chút thay đổi, phiên bản này cung cấp hai lần espresso để tăng cường thêm năng lượng.",
+      "images": "https://htmldemo.net/koffee/koffee/img/koffee/s-4.jpg",
+      "price": 500000
+    },
+    {
+      "id": "5",
+      "name": "Cà phê Americano",
+      "description": "Một sự lựa chọn cổ điển, được làm từ một shot espresso và nước nóng, mang lại một trải nghiệm cà phê đậm đà và thỏa mãn.",
+      "images": "https://htmldemo.net/koffee/koffee/img/koffee/s-5.jpg",
+      "price": 200000
+    },
+    {
+      "id": "6",
+      "name": "Cà phê Americano",
+      "description": "Đơn giản nhưng đầy đủ, Americano này mang lại hương vị mềm mại và đậm đà, hoàn hảo cho mọi thời điểm trong ngày.",
+      "images": "https://htmldemo.net/koffee/koffee/img/koffee/s-6.jpg",
+      "price": 200000
+    },
+    {
+      "id": "7",
+      "name": "Cà phê Americano",
+      "description": "Một cổ điển đơn giản, được làm từ nước nóng và một shot espresso, mang lại một lượng caffeine mạnh mẽ mỗi lần uống.",
+      "images": "https://htmldemo.net/koffee/koffee/img/koffee/s-7.jpg",
+      "price": 200000
+    },
+    {
+      "id": "8",
+      "name": "Cà phê Americano",
+      "description": "Một lựa chọn không thể thiếu cho những người yêu cà phê, Americano này mang lại hương vị mạnh mẽ và đậm đà chắc chắn sẽ làm hài lòng.",
+      "images": "https://htmldemo.net/koffee/koffee/img/koffee/s-8.jpg",
+      "price": 200000
+    }
+  ],
+  "comments": [
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "ccfe",
+      "text": "",
+      "postId": "1"
+    },
+    {
+      "id": "c476",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
